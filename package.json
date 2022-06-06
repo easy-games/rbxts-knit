@@ -1,5 +1,5 @@
 {
-	"name": "@rbxts/knit",
+	"name": "@easy-games/knit",
 	"version": "0.0.15-alpha.0",
 	"description": "Roblox game framework (Alpha)",
 	"main": "src/init.lua",
