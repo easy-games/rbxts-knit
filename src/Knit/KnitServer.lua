@@ -175,6 +175,7 @@ function KnitServer.Start()
 		for _,service in pairs(services) do
 			if (type(service.KnitInit) == "function") then
 				table.insert(promisesInitServices, Promise.new(function(r)
+					debug.setmemorycategory(service.Name)
 					service:KnitInit()
 					r()
 				end))
@@ -188,7 +189,10 @@ function KnitServer.Start()
 		-- Start:
 		for _,service in pairs(services) do
 			if (type(service.KnitStart) == "function") then
-				Thread.SpawnNow(service.KnitStart, service)
+				task.spawn(function()
+					debug.setmemorycategory(service.Name)
+					service:KnitStart()
+				end)
 			end
 		end
 

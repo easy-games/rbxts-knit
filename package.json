@@ -6,7 +6,7 @@
 	"typings": "src/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/osyrisrblx/rbxts-knit.git"
+		"url": "https://github.com/easy-games/rbxts-knit.git"
 	},
 	"license": "MIT",
 	"scripts": {},

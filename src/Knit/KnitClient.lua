@@ -122,6 +122,7 @@ function KnitClient.Start()
 		for _,controller in pairs(controllers) do
 			if (type(controller.KnitInit) == "function") then
 				table.insert(promisesStartControllers, Promise.new(function(r)
+					debug.setmemorycategory(controller.Name)
 					controller:KnitInit()
 					r()
 				end))
@@ -135,7 +136,10 @@ function KnitClient.Start()
 		-- Start:
 		for _,controller in pairs(controllers) do
 			if (type(controller.KnitStart) == "function") then
-				Thread.SpawnNow(controller.KnitStart, controller)
+				task.spawn(function()
+					debug.setmemorycategory(controller.Name)
+					controller:KnitStart()
+				end)
 			end
 		end
 
