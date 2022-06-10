@@ -60,7 +60,6 @@ export { default as ClientRemoteSignal } from "./Knit/Util/Remote/ClientRemoteSi
 
 export { default as Component } from "./Knit/Util/Component";
 export { default as Loader } from "./Knit/Util/Loader";
-export { default as Maid } from "./Knit/Util/Maid";
 export { default as Option } from "./Knit/Util/Option";
 export { default as Promise } from "./Knit/Util/Promise";
 export { default as Ser } from "./Knit/Util/Ser";
@@ -69,4 +68,3 @@ export { default as Streamable } from "./Knit/Util/Streamable";
 export { default as StreamableUtil } from "./Knit/Util/StreamableUtil";
 export { default as Symbol } from "./Knit/Util/Symbol";
 export { default as TableUtil } from "./Knit/Util/TableUtil";
-export { default as Thread } from "./Knit/Util/Thread";
